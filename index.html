@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHANDHANA.S - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #121212;
+            --secondary-bg: #1e1e1e;
+            --primary-text: #e0e0e0;
+            --secondary-text: #b0b0b0;
+            --accent-color: #6a1b9a;
+            --highlight-color: #ba68c8;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Navigation Bar --- */
+        .navbar {
+            background-color: rgba(30, 30, 30, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        .nav-link {
+            color: var(--secondary-text);
+            text-decoration: none;
+            font-weight: 400;
+            padding: 10px 25px;
+            margin: 0 10px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-radius: 25px;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-text);
+            background-color: var(--accent-color);
+        }
+
+        /* --- Portfolio Layout --- */
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 80px auto 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .left-panel, .right-panel {
+            background-color: var(--secondary-bg);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* --- Section Anchors --- */
+        .section-anchor {
+            padding-top: 80px; /* Offset for fixed navbar */
+            margin-top: -80px;
+            display: block;
+        }
+
+        /* --- Profile Header --- */
+        .profile-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            margin-bottom: 5px;
+            color: var(--highlight-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        .profile-header p {
+            font-size: 1.2em;
+            color: var(--secondary-text);
+            font-weight: 300;
+        }
+
+        /* --- Section Styling --- */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--highlight-color);
+            margin-bottom: 20px;
+        }
+
+        .section-content {
+            margin-bottom: 30px;
+        }
+
+        .section-content h3 {
+            color: var(--primary-text);
+            margin-bottom: 5px;
+            border-bottom: 1px solid var(--secondary-bg);
+            padding-bottom: 5px;
+        }
+
+        .section-content p, .section-content ul {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: var(--secondary-text);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background-color: var(--accent-color);
+            color: var(--primary-text);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: transform 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-3px);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .portfolio-container {
+                grid-template-columns: 1fr;
+                margin-top: 100px;
+            }
+            .left-panel, .right-panel {
+                padding: 20px;
+            }
+            .navbar {
+                justify-content: space-around;
+            }
+            .nav-link {
+                padding: 10px 15px;
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#education" class="nav-link">Education</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#training" class="nav-link">Training</a>
+    <a href="#certificates" class="nav-link">Certificates</a>
+</nav>
+
+<div class="portfolio-container">
+    <div class="left-panel">
+        <div class="profile-header">
+            <h1>CHANDHANA.S</h1>
+            <p>Aspiring Professional</p>
+        </div>
+        
+        <div class="section-content">
+            <h2 class="section-title">Contact</h2>
+            [cite_start]<p><strong>Phone:</strong> 9025266418 [cite: 3]</p>
+            [cite_start]<p><strong>Email:</strong> <a href="mailto:reddychandhana79@gmail.com" style="color: var(--highlight-color);">reddychandhana79@gmail.com</a> [cite: 3]</p>
+            [cite_start]<p><strong>Location:</strong> Kuppatti (v) C.R.Palyam (post) Denkanikottai (taluk) Krishnagiri (dist) Tamilnadu [cite: 2]</p>
+        </div>
+        
+        <div class="section-content" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <h3>Technical Skills</h3>
+            <div class="skills-list">
+                [cite_start]<span class="skill-tag">C</span> [cite: 17]
+                [cite_start]<span class="skill-tag">C++</span> [cite: 17]
+                [cite_start]<span class="skill-tag">Java</span> [cite: 17]
+                [cite_start]<span class="skill-tag">PPT</span> [cite: 17]
+                [cite_start]<span class="skill-tag">Word</span> [cite: 18]
+                [cite_start]<span class="skill-tag">Canva</span> [cite: 18]
+            </div>
+            <h3>Soft Skills</h3>
+            <div class="skills-list">
+                [cite_start]<span class="skill-tag">Communication</span> [cite: 13]
+                [cite_start]<span class="skill-tag">Teamwork</span> [cite: 14]
+                [cite_start]<span class="skill-tag">Problem Solving</span> [cite: 15]
+            </div>
+        </div>
+        
+        <div class="section-content">
+            <h2 class="section-title">Hobbies</h2>
+            <ul>
+                [cite_start]<li>Listening to music [cite: 24]</li>
+                [cite_start]<li>Dancing [cite: 24]</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <div class="section-content" id="about">
+            <h2 class="section-title">Objective</h2>
+            [cite_start]<p>My objective is to work in an environment that encourages professional growth and success, where I can effectively utilize my skills and knowledge to contribute to the team[cite: 5].</p>
+        </div>
+        
+        <div class="section-content" id="education">
+            <h2 class="section-title">Education</h2>
+            <ul>
+                <li>
+                    <h3>Masters in Computer Application</h3>
+                    <p>St. [cite_start]Francis De Sales College (Autonomous) Bengaluru [cite: 7]</p>
+                    [cite_start]<p>December 2024 - present[cite: 9].</p>
+                </li>
+                <li>
+                    <h3>BCA</h3>
+                    <p>St. [cite_start]Joseph College of Arts and science for women, Hosur [cite: 8]</p>
+                    <p>2021-2024 | [cite_start]80%[cite: 8].</p>
+                </li>
+                <li>
+                    <h3>HSC</h3>
+                    <p>Govt. [cite_start]Higher.Sec.School [cite: 8]</p>
+                    <p>2019-2021 | [cite_start]85%[cite: 8].</p>
+                </li>
+                <li>
+                    <h3>SSLC</h3>
+                    <p>Govt. [cite_start]Girls.High.School [cite: 8]</p>
+                    <p>2018-2019 | [cite_start]86%[cite: 8].</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section-content" id="training">
+            <h2 class="section-title">Training & Internship</h2>
+            <ul>
+                <li>
+                    <h3>Barclays Lifeskill Programme</h3>
+                    [cite_start]<p>I attended the "Barclays lifeskill programme" conducted by GTT Foundation, which helped improve my interview skills, employability skills, and overall workspace readiness[cite: 11].</p>
+                </li>
+                <li>
+                    <h3>Internship: "Sports analysis using Power BI"</h3>
+                    [cite_start]<p>I completed an internship project on "Sports analysis using Power BI" conducted by BOSTON TRAINING ACADEMY from June 26, 2023, to July 10, 2023[cite: 20].</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section-content" id="certificates">
+            <h2 class="section-title">Certificates</h2>
+            <ul>
+                [cite_start]<li>Certified for a presentation on "Recent Trends technology" and "Blockchain"[cite: 22].</li>
+                [cite_start]<li>Certified for completing the course on "Digital 101 journey"[cite: 22].</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
